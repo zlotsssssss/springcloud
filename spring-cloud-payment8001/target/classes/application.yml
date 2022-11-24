@@ -41,6 +41,10 @@ eureka:
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+debug: true
+
+
+
 
 
 

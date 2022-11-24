@@ -1,11 +1,9 @@
 package wx.th.zlo.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-
 import wx.th.zlo.common.Result;
 import wx.th.zlo.entity.PaymentEntity;
 import wx.th.zlo.service.PaymentService;
@@ -50,4 +48,16 @@ public class PaymentController {
         Thread.sleep(second*1000);
         return Result.success("ok");
     }
+
+    @GetMapping("/payment/hystrix/ok")
+    public String ok(){
+        return paymentService.ok();
+    }
+
+    @GetMapping("/payment/hystrix/timeout/{second}")
+    public String timeOut(@PathVariable String second) throws InterruptedException {
+        return paymentService.timeOut(second);
+    }
+
+
 }

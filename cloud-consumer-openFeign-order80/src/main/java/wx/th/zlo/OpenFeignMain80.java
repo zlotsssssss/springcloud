@@ -2,18 +2,19 @@ package wx.th.zlo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * ClassName: Payment8001Main
+ * ClassName: OpenFeignMain80
  * Description: TODO
  * Author: zlo
- * Date: 2022/11/1 22:27
+ * Date: 2022/11/4 21:15
  * Version: 1.0.0
  */
 @SpringBootApplication
-public class Payment8001Main {
+@EnableFeignClients
+public class OpenFeignMain80 {
     public static void main(String[] args) {
-        SpringApplication.run(Payment8001Main.class,args);
+        SpringApplication.run(OpenFeignMain80.class,args);
     }
 }

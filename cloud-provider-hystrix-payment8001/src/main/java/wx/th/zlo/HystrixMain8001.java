@@ -2,18 +2,19 @@ package wx.th.zlo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 
 /**
- * ClassName: Payment8001Main
+ * ClassName: HystrixMain8001
  * Description: TODO
  * Author: zlo
- * Date: 2022/11/1 22:27
+ * Date: 2022/11/6 16:33
  * Version: 1.0.0
  */
 @SpringBootApplication
-public class Payment8001Main {
+@EnableCircuitBreaker
+public class HystrixMain8001 {
     public static void main(String[] args) {
-        SpringApplication.run(Payment8001Main.class,args);
+        SpringApplication.run(HystrixMain8001.class,args);
     }
 }
