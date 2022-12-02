@@ -8,6 +8,7 @@ import wx.th.zlo.common.Result;
 
 @Component
 @FeignClient(value = "cloud-payment-service")
+//配置
 public interface PaymentFeignService {
     @GetMapping("/payment/get/{id}")
      Result get(@PathVariable(value="id") String id);
